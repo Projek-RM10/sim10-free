@@ -35,7 +35,7 @@
       50% { transform: scale(1.03); }
     }
 
-    /* EFEK BERKEDIP (BLINKING) PADA BANNER ATAS */
+    /* EFEK BERKEDIP PADA BANNER ATAS */
     @keyframes bannerBlink {
       0%, 100% { 
         opacity: 1; 
@@ -94,7 +94,7 @@
         ℹ️ Halaman ini membaca secara automatik ke bawah secara santai. Tonton video dan dengar audio di bawah untuk faham cara sistem ini berfungsi.
       </div>
 
-      <!-- BAGIAN VIDEO & AUDIO (LEBAR MAKSIMAL) -->
+      <!-- BAGIAN VIDEO & AUDIO -->
       <section class="mt-8 w-full max-w-2xl mx-auto bg-slate-900/95 border border-slate-800 rounded-2xl p-2 sm:p-5 shadow-2xl">
         <div class="text-left mb-3 px-1">
           <span class="bg-pink-950 text-pink-300 text-[11px] font-bold px-2.5 py-0.5 rounded border border-pink-500/30 uppercase">
@@ -273,15 +273,15 @@
     </div>
   </div>
 
-  <!-- JAVASCRIPT AUTO-SCROLL AKURAT & FORMULIR -->
+  <!-- JAVASCRIPT AUTO-SCROLL EXTRA SLOW & FORMULIR -->
   <script>
     const NO_WHATSAPP_ADMIN = "601176068373";
 
-    // 1. KAWALAN KELAJUAN AUTO SCROLL (LEBIH PERLAHAN & SANTAI: 0.2)
+    // 1. KONTROL AUTO-SCROLL (KECEPATAN EKSTRA LAMBAT & HALUS: 0.08)
     let isAutoScrolling = true;
     let isPausedByMedia = false;
     let accumulatedScroll = 0;
-    const speedPerFrame = 0.2; // Nilai kecil = bergerak sangat perlahan
+    const speedPerFrame = 0.08; 
 
     function stepScroll() {
       if (isAutoScrolling && !isPausedByMedia) {
