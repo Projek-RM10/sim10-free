@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tuntut SIM Percuma | Komuniti Eastel Malaysia</title>
+  <meta name="description" content="Tuntutan Simkad 5G Eastel Percuma. Panduan langkah demi langkah tukar telefon jadi punca rezeki." />
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    body { 
+      font-family: 'Plus Jakarta Sans', sans-serif; 
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    .hero-glow {
+      background: radial-gradient(circle at 50% 15%, rgba(147, 51, 234, 0.25) 0%, rgba(15, 23, 42, 0) 75%);
+    }
+    .badge-pulse {
+      box-shadow: 0 0 18px rgba(236, 72, 153, 0.45);
+    }
+    .btn-claim {
+      box-shadow: 0 0 30px rgba(245, 158, 11, 0.6);
+      animation: pulseBtn 2s infinite;
+    }
+    @keyframes pulseBtn {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.03); }
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 antialiased selection:bg-purple-500 selection:text-white pb-24">
+
+  <!-- BAR PENGUMUMAN TETAP ATAS (PANDUAN PEMBACAAN) -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-purple-800 via-pink-600 to-amber-500 text-slate-950 font-black text-xs sm:text-sm py-2.5 px-4 text-center shadow-lg">
+    🎁 LINK FREE SIM DI BAWAH. SILA BACA PERLAHAN-LAHAN HINGGA KE BAWAH!
+  </header>
+
+  <!-- JARAK ATAS SUPAYA HEADER TIDAK MENUTUPI KANDUNGAN -->
+  <div class="h-12"></div>
+
+  <!-- NAVIGASI DENGAN LOGO EASTEL -->
+  <nav class="max-w-4xl mx-auto px-5 py-4 flex items-center justify-between border-b border-slate-800">
+    <div class="flex items-center gap-3">
+      <img src="image/logo-eastel.jpg" alt="Logo Eastel" class="h-10 w-auto rounded-lg border border-slate-700 shadow-sm" onerror="this.src='https://placehold.co/120x40/7e22ce/white?text=EASTEL'" />
+      <span class="font-extrabold text-base sm:text-lg tracking-tight bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+        Eastel Free SIM Portal
+      </span>
+    </div>
+    <span class="text-xs bg-slate-900 border border-slate-700 px-3 py-1 rounded-full text-slate-400">
+      Auto-Scroll Aktif ⏳
+    </span>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <header class="hero-glow relative pt-8 pb-12 px-5 text-center">
+    <div class="max-w-3xl mx-auto">
+      
+      <div class="inline-flex items-center gap-2 bg-purple-950/90 border border-purple-500/50 px-4 py-1.5 rounded-full text-purple-300 text-xs sm:text-sm font-semibold mb-6 badge-pulse">
+        <span>⚡ Peluang Khas Pembaca Terpilih Sahaja</span>
+      </div>
+
+      <h1 class="text-3xl sm:text-5xl font-black tracking-tight leading-tight mb-5 text-white">
+        "Bila Kali Terakhir Duit Belanja Cukup Tanpa Perlu <span class="text-rose-400 underline decoration-rose-500/40">Fikir Belanja Esok</span>?"
+      </h1>
+
+      <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
+        Kami faham rasa perit bila belanja dapur makin susut sebelum gaji baru masuk. Hari ini kami sediakan simkad 5G percuma untuk anda mulakan ikhtiar jana pendapatan kedua dari telefon anda sendiri!
+      </p>
+
+      <div class="bg-amber-500/10 border border-amber-500/30 rounded-2xl p-4 text-amber-300 text-xs sm:text-sm font-medium">
+        ℹ️ Halaman ini membaca secara automatik ke bawah. Tonton video dan dengar audio di bawah untuk faham cara sistem ini berfungsi.
+      </div>
+
+      <!-- BAHAGIAN VIDEO & AUDIO (JEDA AUTO-SCROLL) -->
+      <section class="mt-10 max-w-xl mx-auto bg-slate-900/90 border border-slate-800 rounded-2xl p-4 shadow-2xl">
+        <div class="text-left mb-3">
+          <span class="bg-pink-950 text-pink-300 text-[11px] font-bold px-2.5 py-0.5 rounded border border-pink-500/30 uppercase">
+            Wajib Tonton Video:
+          </span>
+          <h2 class="text-white font-bold text-sm sm:text-base mt-1">Simulasi Cara Duit Masuk Bulan Pertama</h2>
+        </div>
+
+        <div class="rounded-xl overflow-hidden border border-slate-700 bg-black aspect-video relative">
+          <video id="eastelVideo" loop muted playsinline preload="auto" class="w-full h-full object-cover">
+            <source src="video/level1.mp4" type="video/mp4">
+            Pelayar anda tidak menyokong video ini.
+          </video>
+        </div>
+
+        <!-- BUTANG BUKA AUDIO / JEDA AUTO-SCROLL -->
+        <div class="mt-4">
+          <button id="unmuteBtn" type="button" class="w-full bg-gradient-to-r from-amber-400 via-pink-500 to-purple-600 hover:opacity-95 text-slate-950 font-black py-3.5 px-4 rounded-xl shadow-lg text-xs sm:text-sm transition flex items-center justify-center gap-2 cursor-pointer">
+            <span id="soundIcon" class="text-lg">🔊</span>
+            <span id="soundText">KLIK DI SINI UNTUK DENGAR AUDIO VIDEO</span>
+          </button>
+          <p id="videoStatusNote" class="text-[11px] text-slate-400 mt-2 text-center">
+            Pergerakan halaman akan dijeda secara automatik sepanjang audio dimainkan.
+          </p>
+        </div>
+      </section>
+
+    </div>
+  </header>
+
+  <!-- KISAH KEJAYAAN LEADER (DENGAN GAMBAR image/leaders.png) -->
+  <section class="py-12 px-5 bg-slate-900/60 border-y border-slate-800">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-8">
+        <span class="text-amber-400 text-xs font-bold uppercase tracking-wider bg-amber-950/60 px-3 py-1 rounded-full border border-amber-500/30">Kisah Benar</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-3">Bermula Dari Bawah, Berkembang Jadi Aset</h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <!-- GAMBAR BUKTI PENDAPATAN LEADER -->
+        <div class="rounded-2xl overflow-hidden border border-purple-500/40 shadow-2xl bg-slate-950">
+          <img src="image/leaders.png" alt="Leader Eastel Community" class="w-full h-auto object-cover" onerror="this.src='https://placehold.co/600x450/1e1b4b/white?text=BUKTI+LEADER'" />
+        </div>
+
+        <!-- PENERANGAN -->
+        <div class="space-y-4">
+          <div class="bg-slate-950 p-6 rounded-2xl border border-slate-800">
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              Leader komuniti kami dulu juga menghadapi masalah duit dapur kering dan buntu memikirkan jalan keluar. Bezanya beliau berani mengambil peluang dan konsisten berkongsi faedah simkad dengan orang terdekat.
+            </p>
+            <div class="mt-4 p-4 rounded-xl bg-purple-950/40 border border-purple-500/30 text-center">
+              <span class="text-xs text-purple-300 font-bold uppercase">Potensi Pasif Berterusan:</span>
+              <div class="text-2xl font-black text-amber-300 mt-1">RM 1,000 - RM 5,000 Sebulan</div>
+              <p class="text-[11px] text-slate-400 mt-1">Komisen royalti masuk setiap kali pengguna membuat tambah nilai data setiap bulan.</p>
+            </div>
+          </div>
+          
+          <div class="p-3 rounded-xl bg-slate-950/80 border border-amber-500/40 text-[11px] text-amber-200/90 leading-relaxed">
+            ⚠️ <em>Penafian: Hasil rezeki dan pendapatan adalah berbeza bagi setiap individu mengikut tahap kerajinan, komitmen, dan tindakan konsisten masing-masing[span_4](start_span)[span_4](end_span).</em>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PENGIRAAN SIMULASI BULAN PERTAMA -->
+  <section class="py-12 px-5 max-w-3xl mx-auto">
+    <div class="bg-slate-900 border-2 border-emerald-500/50 rounded-3xl p-6 sm:p-8 shadow-2xl">
+      <div class="text-center mb-6">
+        <span class="text-emerald-400 text-xs font-extrabold uppercase tracking-wider bg-emerald-950/60 px-3 py-1 rounded-full border border-emerald-500/30">Matematik Ringkas</span>
+        <h2 class="text-xl sm:text-2xl font-bold text-white mt-2">Berapa Pulangan 10 Orang Pertama?</h2>
+      </div>
+
+      <div class="space-y-3 font-mono text-xs sm:text-sm text-slate-200">
+        <div class="flex justify-between items-center py-2 border-b border-slate-800">
+          <span>1. Pulangan Topup Sendiri:</span>
+          <span class="font-bold text-emerald-400">+ RM2.10</span>
+        </div>
+        <div class="flex justify-between items-center py-2 border-b border-slate-800">
+          <span>2. Untung Runcit 10 Simkad:</span>
+          <span class="font-bold text-emerald-400">+ RM80.00</span>
+        </div>
+        <div class="flex justify-between items-center py-2 border-b border-slate-800">
+          <span>3. Komisen Topup Rangkaian:</span>
+          <span class="font-bold text-emerald-400">+ RM45.50</span>
+        </div>
+        <div class="flex justify-between items-center pt-3 text-base sm:text-lg font-black text-white">
+          <span class="font-sans">JUMLAH BULAN 1:</span>
+          <span class="text-amber-300">= RM127.60</span>
+        </div>
+      </div>
+
+      <p class="text-xs text-slate-400 text-center mt-4 leading-relaxed font-sans">
+        💡 Anda langgan internet RM35, tapi dapat semula tunai <strong>RM127.60</strong>. Bil telefon percuma dan ada untung bersih belanja dapur!
+      </p>
+    </div>
+  </section>
+
+  <!-- JAMINAN BIMBINGAN JEMAAH (DENGAN GAMBAR image/community-malaysia.png) -->
+  <section class="py-12 px-5 bg-slate-900/80 border-t border-slate-800">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-8">
+        <span class="text-purple-400 text-xs font-bold uppercase tracking-wider bg-purple-950 px-3 py-1 rounded-full border border-purple-800/40">Bimbingan Jemaah</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-3">Bergerak Bersama Komuniti 1 Malaysia</h2>
+        <p class="text-slate-400 max-w-xl mx-auto text-xs sm:text-sm mt-2">
+          Anda tidak ditinggalkan sendirian. Masuk group WhatsApp rasmi kami untuk sokongan dan bimbingan berterusan.
+        </p>
+      </div>
+
+      <!-- GAMBAR GROUP SOKONGAN KOMUNITI -->
+      <div class="max-w-2xl mx-auto rounded-2xl overflow-hidden border border-slate-700 shadow-2xl bg-slate-950 mb-6">
+        <img src="image/community-malaysia.png" alt="Komuniti Eastel Malaysia" class="w-full h-auto object-cover" onerror="this.src='https://placehold.co/600x450/1e1b4b/white?text=EASTEL+COMMUNITY'" />
+      </div>
+
+      <div class="text-center">
+        <div class="inline-block bg-slate-950 border border-slate-800 rounded-xl px-4 py-2 text-xs text-purple-300">
+          ✅ Bimbingan Dari Asas | ✅ Sesi Zoom Mingguan | ✅ Skrip Copy-Paste Siap[span_5](start_span)[span_5](end_span)
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ZON PENAMAT: BUTANG TUNTUT SIM PERCUMA -->
+  <footer id="zonTamat" class="pt-8 pb-16 px-5 max-w-xl mx-auto text-center">
+    <div class="p-6 rounded-3xl bg-gradient-to-b from-amber-500/20 via-slate-900 to-slate-950 border-2 border-amber-500 shadow-2xl">
+      <span class="text-3xl">🎉</span>
+      <h2 class="text-2xl font-black text-white mt-2 mb-2">Tahniah Kerana Selesai Membaca!</h2>
+      <p class="text-xs sm:text-sm text-slate-300 mb-6">
+        Kuota simkad promosi percuma masih dibuka. Sila tekan butang di bawah untuk menuntut simkad anda dan menyemak liputan kawasan.
+      </p>
+
+      <button type="button" onclick="bukaPopupClaim()" class="w-full bg-gradient-to-r from-amber-400 via-amber-500 to-yellow-500 text-slate-950 font-black py-4 px-6 rounded-2xl text-base sm:text-lg transition transform btn-claim cursor-pointer flex items-center justify-center gap-2">
+        <span>🎁 CLAIM SIM FREE SEKARANG</span> ➔
+      </button>
+
+      <p class="text-[11px] text-slate-400 mt-3">
+        *Terhad untuk pengguna baharu yang ingin semak liputan U Mobile sahaja.
+      </p>
+    </div>
+  </footer>
+
+  <!-- POPUP MODAL BORANG TUNTUTAN SIM -->
+  <div id="popupClaim" class="hidden fixed inset-0 z-[999] bg-black/85 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-slate-900 border-2 border-emerald-500 rounded-3xl max-w-md w-full p-6 text-left shadow-2xl relative">
+      
+      <div class="text-center mb-5">
+        <div class="text-3xl mb-1">📋</div>
+        <h2 class="text-xl font-black text-white">Borang Tuntutan SIM Free</h2>
+        <p class="text-xs text-slate-400 mt-1">
+          Isi maklumat di bawah untuk semakan liputan 5G/4G U Mobile & penghantaran simkad percuma anda.
+        </p>
+      </div>
+
+      <form id="formClaim" class="space-y-3.5">
+        <div>
+          <label class="block text-xs font-bold uppercase text-slate-300 mb-1">Nama Penuh</label>
+          <input type="text" id="claimNama" required placeholder="Contoh: Azman bin Daud" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-2.5 text-white text-xs sm:text-sm focus:outline-none focus:border-emerald-500" />
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold uppercase text-slate-300 mb-1">Nombor Telefon / WhatsApp</label>
+          <input type="tel" id="claimTel" required placeholder="Contoh: 0123456789" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-2.5 text-white text-xs sm:text-sm focus:outline-none focus:border-emerald-500" />
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold uppercase text-slate-300 mb-1">Kawasan / Poskod (Semak Coverage)</label>
+          <input type="text" id="claimKawasan" required placeholder="Contoh: Gurun, Kedah / Poskod 08300" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-2.5 text-white text-xs sm:text-sm focus:outline-none focus:border-emerald-500" />
+        </div>
+
+        <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-black py-3.5 px-4 rounded-xl shadow-lg text-sm transition mt-2 flex items-center justify-center gap-2 cursor-pointer">
+          <span>Hantar Maklumat ke WhatsApp</span> ➔
+        </button>
+
+        <button type="button" onclick="tutupPopupClaim()" class="w-full bg-slate-800 hover:bg-slate-700 text-slate-400 font-semibold py-2 px-4 rounded-xl text-xs transition cursor-pointer">
+          Batal
+        </button>
+      </form>
+
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT KAWALAN AUTO-SCROLL, AUDIO & BORANG -->
+  <script>
+    // Tetapan Nombor WhatsApp Admin
+    const NO_WHATSAPP_ADMIN = "601176068373";
+
+    // 1. KAWALAN AUTO SCROLL
+    let isAutoScrolling = true;
+    let isPausedByMedia = false;
+    const scrollSpeed = 0.8; // Kelajuan bacaan perlahan
+
+    function runAutoScroll() {
+      if (isAutoScrolling && !isPausedByMedia) {
+        window.scrollBy(0, scrollSpeed);
+        if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight - 8) {
+          isAutoScrolling = false;
+        }
+      }
+      requestAnimationFrame(runAutoScroll);
+    }
+    requestAnimationFrame(runAutoScroll);
+
+    // KUNCI MANUAL SCROLL (PENGUNJUNG TAK BOLEH SCROLL MANUAL KE BAWAH)
+    window.addEventListener('wheel', function(e) {
+      e.preventDefault();
+    }, { passive: false });
+
+    window.addEventListener('touchmove', function(e) {
+      if (document.getElementById('popupClaim').contains(e.target)) return;
+      e.preventDefault();
+    }, { passive: false });
+
+    window.addEventListener('keydown', function(e) {
+      if ([32, 33, 34, 35, 38, 40].includes(e.keyCode)) {
+        e.preventDefault();
+      }
+    });
+
+    // 2. KAWALAN AUDIO / VIDEO
+    const video = document.getElementById('eastelVideo');
+    const unmuteBtn = document.getElementById('unmuteBtn');
+    const soundIcon = document.getElementById('soundIcon');
+    const soundText = document.getElementById('soundText');
+    const note = document.getElementById('videoStatusNote');
+
+    if (unmuteBtn && video) {
+      unmuteBtn.addEventListener('click', function () {
+        if (video.muted || video.paused) {
+          video.muted = false;
+          video.volume = 1.0;
+          video.currentTime = 0;
+          video.play();
+          
+          isPausedByMedia = true;
+          soundIcon.textContent = '⏸️';
+          soundText.textContent = 'AUDIO AKTIF - SCROLLING DIJEDA';
+          note.textContent = 'Auto-scroll sedang berhenti. Halaman akan bersambung setelah video selesai.';
+          note.classList.add('text-amber-300');
+        } else {
+          video.pause();
+          isPausedByMedia = false;
+          soundIcon.textContent = '🔊';
+          soundText.textContent = 'SAMBUNG MAIN VIDEO & AUDIO';
+          note.textContent = 'Auto-scroll disambung semula.';
+          note.classList.remove('text-amber-300');
+        }
+      });
+
+      // BILA VIDEO SELESAI, SAMBUNG AUTO-SCROLL
+      video.addEventListener('ended', function() {
+        isPausedByMedia = false;
+        soundIcon.textContent = '✅';
+        soundText.textContent = 'VIDEO SELESAI (SCROLL DISAMBUNG)';
+        note.textContent = 'Video selesai. Halaman kini bersambung membaca ke bawah.';
+      });
+    }
+
+    // 3. POPUP MODAL CLAIM SIM
+    function bukaPopupClaim() {
+      isAutoScrolling = false;
+      document.getElementById('popupClaim').classList.remove('hidden');
+    }
+
+    function tutupPopupClaim() {
+      document.getElementById('popupClaim').classList.add('hidden');
+    }
+
+    // 4. PENGHANTARAN BORANG KE WHATSAPP ADMIN
+    document.getElementById('formClaim').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const nama = document.getElementById('claimNama').value.trim();
+      const tel = document.getElementById('claimTel').value.trim();
+      const kawasan = document.getElementById('claimKawasan').value.trim();
+
+      const mesejWhatsApp = `Salam Admin Eastel,\n\nSaya nak buat permohonan *CLAIM SIM FREE*:\n👤 *Nama:* ${nama}\n📱 *No Tel:* ${tel}\n📍 *Kawasan / Poskod:* ${kawasan}\n\nMohon semak liputan U Mobile di kawasan saya dan poskan simkad percuma. Terima kasih!`;
+
+      const urlHantar = `https://api.whatsapp.com/send?phone=${NO_WHATSAPP_ADMIN}&text=${encodeURIComponent(mesejWhatsApp)}`;
+      
+      window.open(urlHantar, '_blank');
+      tutupPopupClaim();
+    });
+  </script>
+</body>
+</html>
