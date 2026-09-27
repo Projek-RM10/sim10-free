@@ -54,12 +54,12 @@
 <body class="bg-slate-950 text-slate-100 antialiased selection:bg-purple-500 selection:text-white pb-28">
 
   <!-- BAR PENGUMUMAN TETAP ATAS DENGAN EFEK BLINKING -->
-  <header class="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-purple-800 via-pink-600 to-amber-500 text-slate-950 font-black text-xs sm:text-sm py-2.5 px-4 text-center shadow-lg blinking-bar">
+  <header class="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-purple-800 via-pink-600 to-amber-500 text-slate-950 font-black text-xs sm:text-sm py-2 px-4 text-center shadow-lg blinking-bar">
     🎁 LINK FREE SIM DI BAWAH. SILA BACA PERLAHAN-LAHAN HINGGA KE BAWAH!
   </header>
 
   <!-- JARAK ATAS PENGHALANG HEADER -->
-  <div class="h-12"></div>
+  <div class="h-11"></div>
 
   <!-- NAVIGASI LOGO -->
   <nav class="max-w-4xl mx-auto px-5 py-4 flex items-center justify-between border-b border-slate-800">
@@ -214,22 +214,29 @@
     </div>
   </section>
 
-  <!-- ZON PENAMAT: KOTAK KLAIM SIM -->
+  <!-- ZON PENAMAT: KOTAK KLAIM SIM (TITIK HENTI AUTOMATIK) -->
   <footer id="zonTamat" class="pt-8 pb-12 px-5 max-w-xl mx-auto text-center">
     <div class="p-6 rounded-3xl bg-gradient-to-b from-amber-500/20 via-slate-900 to-slate-950 border-2 border-amber-500 shadow-2xl">
       <span class="text-3xl">🎉</span>
       <h2 class="text-2xl font-black text-white mt-2 mb-2">Tahniah Kerana Selesai Membaca!</h2>
-      <p class="text-xs sm:text-sm text-slate-300 mb-6">
-        Kuota simkad promosi percuma masih dibuka. Sila tekan butang di bawah untuk menuntut simkad anda dan menyemak liputan kawasan.
+      <p class="text-xs sm:text-sm text-slate-300 mb-5">
+        Kuota simkad promosi percuma masih dibuka. Sila semak liputan kawasan dan tuntut simkad anda di bawah.
       </p>
 
+      <!-- NOTIS PANDUAN PENGGUNA TIKTOK (DILETAKKAN DI SINI SEBELUM BUTANG CLAIM) -->
+      <div class="bg-amber-400 text-slate-950 text-[11px] sm:text-xs font-bold p-3.5 rounded-2xl mb-5 shadow-lg text-left leading-relaxed border border-amber-500">
+        ⚠️ <span class="font-black uppercase">Penting Jika Dari TikTok:</span><br>
+        Jika borang WhatsApp tersekat atau tidak terbuka sendiri, sila tekan <strong>3 titik (...) di penjuru atas kanan skrin</strong> & pilih <strong>"Open in browser" / "Buka di pelayar luar"</strong> supaya pendaftaran berjaya dihantar.
+      </div>
+
+      <!-- BUTANG CLAIM UTAMA -->
       <button id="btnClaimUtama" type="button" onclick="bukaPopupClaim()" class="w-full bg-gradient-to-r from-amber-400 via-amber-500 to-yellow-500 text-slate-950 font-black py-4 px-6 rounded-2xl text-base sm:text-lg transition transform btn-claim cursor-pointer flex items-center justify-center gap-2">
         <span>🎁 CLAIM SIM FREE SEKARANG</span> ➔
       </button>
 
-      <p class="text-[11px] text-slate-400 mt-3">
+      <!-- TEKS PENAFIAN SELEPAS BUTANG CLAIM -->
+      <p class="text-[11px] text-slate-400 mt-3.5 leading-relaxed">
         *Pengguna baharu atau nak kekal number lama- yang ingin semak liputan U Mobile sebelum SIM FREE dihantar ke alamat anda*
-
       </p>
     </div>
   </footer>
@@ -274,14 +281,14 @@
     </div>
   </div>
 
-  <!-- JAVASCRIPT AUTO-SCROLL KEBAL & HENTI TEPAT -->
+  <!-- JAVASCRIPT AUTO-SCROLL (SPEED 0.16) & FORMULIR -->
   <script>
     const NO_WHATSAPP_ADMIN = "601176068373";
 
     let isAutoScrolling = true;
     let isPausedByMedia = false;
     let accumulatedScroll = 0;
-    const speedPerFrame = 0.18; // Kelajuan membaca sangat santai
+    const speedPerFrame = 0.16; // Kelajuan seimbang & selesa dibaca
 
     let lastScrollY = -1;
     let stuckFrames = 0;
@@ -289,22 +296,21 @@
     function stepScroll() {
       if (isAutoScrolling && !isPausedByMedia) {
         
-        // 1. HENTI SEBAIK SAHAJA BUTANG CLAIM MASUK KE DALAM SKRIN
+        // 1. BERHENTI SEBAIK SAHAJA KOTAK PANDUAN & BUTANG CLAIM TAMPIL DI SKRIN
         const btnClaim = document.getElementById('btnClaimUtama');
         if (btnClaim) {
           const rect = btnClaim.getBoundingClientRect();
-          // Bila kepala butang berada di paras 75% ketinggian skrin, terus henti
           if (rect.top <= (window.innerHeight * 0.75)) {
             isAutoScrolling = false;
             return;
           }
         }
 
-        // 2. PENGESAN DASAR LAMAN (ANTI-STUCK BILA SAMPAI LANTAI)
+        // 2. PENGESAN DASAR LANTAI (ANTI-STUCK)
         const curScroll = window.scrollY || window.pageYOffset || 0;
         if (curScroll === lastScrollY && curScroll > 200) {
           stuckFrames++;
-          if (stuckFrames > 25) { // Jika tersekat 25 frame di lantai, matikan auto-scroll
+          if (stuckFrames > 25) {
             isAutoScrolling = false;
             return;
           }
@@ -327,7 +333,6 @@
       }
     }
 
-    // Mulakan selepas halaman sedia
     if (document.readyState === 'complete') {
       requestAnimationFrame(stepScroll);
     } else {
@@ -339,7 +344,7 @@
       }, 500);
     }
 
-    // KUNCI MANUAL SCROLL PENGUNJUNG
+    // KUNCI MANUAL SCROLL
     window.addEventListener('wheel', function(e) {
       e.preventDefault();
     }, { passive: false });
