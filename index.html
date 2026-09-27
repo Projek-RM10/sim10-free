@@ -34,12 +34,27 @@
       0%, 100% { transform: scale(1); }
       50% { transform: scale(1.03); }
     }
+
+    /* EFEK BERKEDIP (BLINKING) PADA BANNER ATAS */
+    @keyframes bannerBlink {
+      0%, 100% { 
+        opacity: 1; 
+        filter: brightness(1.15);
+      }
+      50% { 
+        opacity: 0.35; 
+        filter: brightness(0.85);
+      }
+    }
+    .blinking-bar {
+      animation: bannerBlink 0.9s infinite ease-in-out;
+    }
   </style>
 </head>
 <body class="bg-slate-950 text-slate-100 antialiased selection:bg-purple-500 selection:text-white pb-24">
 
-  <!-- BAR PENGUMUMAN TETAP ATAS -->
-  <header class="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-purple-800 via-pink-600 to-amber-500 text-slate-950 font-black text-xs sm:text-sm py-2.5 px-4 text-center shadow-lg">
+  <!-- BAR PENGUMUMAN TETAP ATAS DENGAN EFEK BLINKING -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-purple-800 via-pink-600 to-amber-500 text-slate-950 font-black text-xs sm:text-sm py-2.5 px-4 text-center shadow-lg blinking-bar">
     🎁 LINK FREE SIM DI BAWAH. SILA BACA PERLAHAN-LAHAN HINGGA KE BAWAH!
   </header>
 
@@ -72,7 +87,7 @@
       </h1>
 
       <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
-        Kami faham rasa perit bila belanja dapur makin susut sebelum gaji baru masuk. Hari ini kami sediakan simkad 5G percuma untuk anda mulakan ikhtiar jana pendapatan kedua dari telefon anda sendiri!
+        Kami faham rasa perit bila belanja dapur makin susut sebelum gaji baru masuk[span_4](start_span)[span_4](end_span). Hari ini kami sediakan simkad 5G percuma untuk anda mulakan ikhtiar jana pendapatan kedua dari telefon anda sendiri!
       </p>
 
       <div class="bg-amber-500/10 border border-amber-500/30 rounded-2xl p-4 text-amber-300 text-xs sm:text-sm font-medium">
@@ -126,17 +141,17 @@
         <div class="space-y-4">
           <div class="bg-slate-950 p-6 rounded-2xl border border-slate-800">
             <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
-              Leader komuniti kami dulu juga menghadapi masalah duit dapur kering dan buntu memikirkan jalan keluar[span_0](start_span)[span_0](end_span). Bezanya beliau berani mengambil peluang dan konsisten berkongsi faedah simkad dengan orang terdekat[span_1](start_span)[span_1](end_span).
+              Leader komuniti kami dulu juga menghadapi masalah duit dapur kering dan buntu memikirkan jalan keluar[span_5](start_span)[span_5](end_span). Bezanya beliau berani mengambil peluang dan konsisten berkongsi faedah simkad dengan orang terdekat[span_6](start_span)[span_6](end_span).
             </p>
             <div class="mt-4 p-4 rounded-xl bg-purple-950/40 border border-purple-500/30 text-center">
               <span class="text-xs text-purple-300 font-bold uppercase">Potensi Pasif Berterusan:</span>
               <div class="text-2xl font-black text-amber-300 mt-1">RM 1,000 - RM 5,000 Sebulan</div>
-              <p class="text-[11px] text-slate-400 mt-1">Komisen royalti masuk setiap kali pengguna membuat tambah nilai data setiap bulan[span_2](start_span)[span_2](end_span).</p>
+              <p class="text-[11px] text-slate-400 mt-1">Komisen royalti masuk setiap kali pengguna membuat tambah nilai data setiap bulan[span_7](start_span)[span_7](end_span).</p>
             </div>
           </div>
           
           <div class="p-3 rounded-xl bg-slate-950/80 border border-amber-500/40 text-[11px] text-amber-200/90 leading-relaxed">
-            ⚠️ <em>Penafian: Hasil rezeki dan pendapatan adalah berbeza bagi setiap individu mengikut tahap kerajinan, komitmen, dan tindakan konsisten masing-masing[span_3](start_span)[span_3](end_span).</em>
+            ⚠️ <em>Penafian: Hasil rezeki dan pendapatan adalah berbeza bagi setiap individu mengikut tahap kerajinan, komitmen, dan tindakan konsisten masing-masing[span_8](start_span)[span_8](end_span).</em>
           </div>
         </div>
       </div>
@@ -171,7 +186,7 @@
       </div>
 
       <p class="text-xs text-slate-400 text-center mt-4 leading-relaxed font-sans">
-        💡 Anda langgan internet RM35, tapi dapat semula tunai <strong>RM127.60</strong>[span_4](start_span)[span_4](end_span). Bil telefon percuma dan ada untung bersih belanja dapur!
+        💡 Anda langgan internet RM35, tapi dapat semula tunai <strong>RM127.60</strong>[span_9](start_span)[span_9](end_span). Bil telefon percuma dan ada untung bersih belanja dapur!
       </p>
     </div>
   </section>
@@ -183,7 +198,7 @@
         <span class="text-purple-400 text-xs font-bold uppercase tracking-wider bg-purple-950 px-3 py-1 rounded-full border border-purple-800/40">Bimbingan Jemaah</span>
         <h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-3">Bergerak Bersama Komuniti 1 Malaysia</h2>
         <p class="text-slate-400 max-w-xl mx-auto text-xs sm:text-sm mt-2">
-          Anda tidak ditinggalkan sendirian. Masuk group WhatsApp rasmi kami untuk sokongan dan bimbingan berterusan[span_5](start_span)[span_5](end_span).
+          Anda tidak ditinggalkan sendirian. Masuk group WhatsApp rasmi kami untuk sokongan dan bimbingan berterusan[span_10](start_span)[span_10](end_span).
         </p>
       </div>
 
@@ -193,7 +208,7 @@
 
       <div class="text-center">
         <div class="inline-block bg-slate-950 border border-slate-800 rounded-xl px-4 py-2 text-xs text-purple-300">
-          ✅ Bimbingan Dari Asas | ✅ Sesi Zoom Mingguan | ✅ Skrip Copy-Paste Siap[span_6](start_span)[span_6](end_span)
+          ✅ Bimbingan Dari Asas | ✅ Sesi Zoom Mingguan | ✅ Skrip Copy-Paste Siap[span_11](start_span)[span_11](end_span)
         </div>
       </div>
     </div>
@@ -258,36 +273,66 @@
     </div>
   </div>
 
-  <!-- JAVASCRIPT AUTO-SCROLL STABIL, AUDIO & FORMULIR -->
+  <!-- JAVASCRIPT AUTO-SCROLL AKURAT & FORMULIR -->
   <script>
     const NO_WHATSAPP_ADMIN = "601176068373";
 
-    // 1. AUTO SCROLL BERJALAN HALUS & LAMBAT
+    // 1. SISTEM AUTO SCROLL DENGAN AKUMULATOR PRESISI (JALAN DI SEMUA HP)
     let isAutoScrolling = true;
     let isPausedByMedia = false;
+    let accumulatedScroll = 0;
+    const speedPerFrame = 0.55; // Kecepatan membaca sangat santai dan stabil
 
-    const scrollTimer = setInterval(function() {
+    function stepScroll() {
       if (isAutoScrolling && !isPausedByMedia) {
-        window.scrollBy(0, 1);
+        accumulatedScroll += speedPerFrame;
+        
+        if (accumulatedScroll >= 1) {
+          const px = Math.floor(accumulatedScroll);
+          accumulatedScroll -= px;
 
-        const totalTinggi = document.documentElement.scrollHeight - window.innerHeight;
-        const posisiSemasa = window.scrollY || window.pageYOffset;
+          const lastPos = window.scrollY || window.pageYOffset || 0;
+          window.scrollBy(0, px);
+          
+          // Cadangan jika browser ponsel menolak window.scrollBy
+          if ((window.scrollY || window.pageYOffset || 0) === lastPos) {
+            document.documentElement.scrollTop += px;
+            document.body.scrollTop += px;
+          }
+        }
 
-        if (posisiSemasa >= totalTinggi - 10) {
+        // Pengecekan ujung halaman yang aman (hanya berhenti jika sudah melewati 400px ke bawah)
+        const maxScroll = (document.documentElement.scrollHeight || document.body.scrollHeight) - window.innerHeight;
+        const curScroll = window.scrollY || window.pageYOffset || document.documentElement.scrollTop || 0;
+
+        if (curScroll >= maxScroll - 15 && curScroll > 400) {
           isAutoScrolling = false;
-          clearInterval(scrollTimer);
         }
       }
-    }, 35); 
+      requestAnimationFrame(stepScroll);
+    }
 
-    // KUNCI SCROLL MANUAL PENGUNJUNG
+    // Mulai scroll setelah DOM selesai dimuat
+    if (document.readyState === 'complete') {
+      requestAnimationFrame(stepScroll);
+    } else {
+      window.addEventListener('load', function() {
+        requestAnimationFrame(stepScroll);
+      });
+      // Fallback cadangan jika event load sudah terlewat
+      setTimeout(function() {
+        requestAnimationFrame(stepScroll);
+      }, 600);
+    }
+
+    // KUNCI MANUAL SCROLL PENGUNJUNG
     window.addEventListener('wheel', function(e) {
       e.preventDefault();
     }, { passive: false });
 
     window.addEventListener('touchmove', function(e) {
       const popup = document.getElementById('popupClaim');
-      if (popup && popup.contains(e.target)) return;
+      if (popup && !popup.classList.contains('hidden')) return; // Izinkan usapan jari di dalam popup form
       e.preventDefault();
     }, { passive: false });
 
@@ -335,7 +380,7 @@
       });
     }
 
-    // 3. POPUP MODAL
+    // 3. POPUP MODAL CLAIM SIM
     function bukaPopupClaim() {
       isAutoScrolling = false;
       document.getElementById('popupClaim').classList.remove('hidden');
